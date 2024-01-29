@@ -1,0 +1,23 @@
+python main.py \
+    --data_root \
+    --train_data_path /store/Dataset/tanya_webface_cfd/ \
+    --val_data_path /data/casia_webface_112x112 \
+    --prefix ir101_47M_adaface\
+    --use_wandb \
+    --use_mxrecord \
+    --gpus 4 \
+    --use_16bit \
+    --arch ir_101 \
+    --batch_size 512 \
+    --num_workers 2 \
+    --epochs 26 \
+    --lr_milestones 1,3,5,7,9,11,13,15 \
+    --lr 0.1 \
+    --head adaface \
+    --m 0.4 \
+    --h 0.333 \
+    --low_res_augmentation_prob 0.2 \
+    --crop_augmentation_prob 0.2 \
+    --photometric_augmentation_prob 0.2 \
+    --save_all_models 
+    
